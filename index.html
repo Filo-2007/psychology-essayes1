@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار المقال الذاتي: نظريات التعلم والإدراك</title>
+    <title>الاختبار المقالي التفاعلي الشامل (30 سؤالاً)</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -50,12 +50,13 @@
         .category-title {
             background: #eaf2f8;
             color: var(--primary-color);
-            padding: 10px 15px;
+            padding: 12px 15px;
             border-radius: 6px;
-            margin-top: 35px;
-            margin-bottom: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-weight: bold;
             border-right: 5px solid var(--secondary-color);
+            font-size: 1.2rem;
         }
 
         .question-card {
@@ -76,7 +77,7 @@
 
         .answer-textarea {
             width: 100%;
-            height: 100px;
+            height: 90px;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
@@ -163,7 +164,7 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.2s ease;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .btn-finish:hover {
@@ -187,8 +188,8 @@
 <body>
 
 <div class="quiz-container">
-    <h1>اختبار الأسئلة المقالية والتقييم الذاتي</h1>
-    <div class="subtitle">اكتب إجابتك في الصندوق المخصص، ثم قارنها بالإجابة النموذجية وقيم نفسك لتصحيح التلقائي.</div>
+    <h1>بنك الأسئلة المقالية التفاعلي (30 سؤالاً)</h1>
+    <div class="subtitle">قم بصياغة إجابتك في الصندوق المخصص لكل سؤال، ثم قارنها بالحل الصحيح وقيم أداءك.</div>
     
     <div id="result-box"></div>
 
@@ -198,15 +199,12 @@
 
         <div class="question-card" data-q="1">
             <div class="question-text">س1: حلل العلاقة بين "النضج" و"مستوى الكائن الحي" في عملية الإدراك وفقاً لمنظور الجشتالت.</div>
-            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا قبل الاطلاع على الحل..."></textarea>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 ترى نظرية الجشتالت أن إمكانية الإدراك تختلف تبعاً للنضج والذكاء والمستوى البيولوجي والارتقائي للكائن الحي. فإدراك الطفل يختلف جوهرياً عن إدراك الراشد، كما أن إدراك الإنسان يتميز عن إدراك الحيوان، حيث يتوقف "الاستبصار" على قدرة الكائن على تنظيم المجال الإدراكي، وكلما كان المجال منظماً، سهل إدراك العلاقات والوصول إلى الحل.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q1')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q1')">إجابتي خاطئة</button>
                 </div>
@@ -218,13 +216,10 @@
             <div class="question-text">س2: ناقش دور "التفاعل الديناميكي" و"حالة عدم الاتزان" في تحفيز عملية التعلم عند الجشتالتيين.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 تعطي الجشتالت أهمية قصوى للتفاعل الديناميكي بين الكائن والبيئة؛ فالكائن يتفاعل لإيجاد حالة من التوازن النسبي لإزالة التوتر الناشئ عن الحاجة (مثل دافع الجوع). هذا التوتر يخلق حالة من عدم الاتزان تدفع الكائن للقيام بسلوك أو حركة تهدف لإعادة التوازن من خلال تغيير المجال السيكولوجي والبيئي، وبمجرد إشباع الحاجة يتوقف النشاط ويستسلم الكائن للهدوء.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q2')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q2')">إجابتي خاطئة</button>
                 </div>
@@ -236,13 +231,10 @@
             <div class="question-text">س3: قارن بين "الآثار الفردية" و"الآثار الكلية" في ذاكرة الجشتالت وكيفية انتقال أثر التدريب.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 الآثار الفردية هي آثار متميزة عن غيرها وتعرف في كل جزئية معينة، بينما الآثار الكلية (النظام العام) هي التي تعمل على جذب الأجزاء وإعطائها دلالة. التعلم الجديد يمحو الآثار الفردية السابقة ليثبت "نظام الأثر" الكلي، وانتقال أثر التدريب يحدث عندما يستطيع الفرد نقل الآثار التي تعلمها وفقاً لنظام الكليات إلى مواقف أخرى مشابهة.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q3')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q3')">إجابتي خاطئة</button>
                 </div>
@@ -254,13 +246,10 @@
             <div class="question-text">س4: ما هي الانتقادات الموجهة لنظرية الجشتالت فيما يتعلق بالخبرة السابقة وعملية الاستبصار؟</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 تتمثل السلبيات في عدم اعتراف الجشتالت بدور الخبرة السابقة في عملية التعلم، واعتبارهم أن الاستبصار عملية فجائية لا دخل للخبرة فيها. كما يرى النقاد أن القوانين الديناميكية التي تحكم الإدراك عندهم لا تفسر بالضرورة القوانين التي تحكم عملية التعلم بشكل مقنع وعلمي خاضع للتجارب.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q4')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q4')">إجابتي خاطئة</button>
                 </div>
@@ -269,16 +258,13 @@
         </div>
 
         <div class="question-card" data-q="5">
-            <div class="question-text">س5: اشرح أهمية نظرية الجشتالت في Mمارسات التعليم الحديثة، خاصة في المرحلة الابتدائية.</div>
+            <div class="question-text">س5: اشرح أهمية نظرية الجشتالت في الممارسات التعليمية الحديثة، خاصة في المرحلة الابتدائية.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 تعتبر الطريقة الكلية في التعلم أساساً في رياض الأطفال والمدارس الابتدائية، حيث أيدت مدرسة علم النفس المعرفي (Cognitive Psychologists) وجهة نظر الجشتالت بأن الكل أكبر من مجموع أجزائه. وتبرز أهميتها في استخدام قوانين الإدراك (مثل قانون التناسب والامتلاء) كأدوات تجعل التعلم أكثر صدقاً وواقعية في الحياة اليومية.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q5')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q5')">إجابتي خاطئة</button>
                 </div>
@@ -286,19 +272,17 @@
             </div>
         </div>
 
+
         <div class="category-title">المجموعة الثانية: نظرية التعلم الاجتماعي (باندورا)</div>
 
         <div class="question-card" data-q="6">
             <div class="question-text">س6: حلل التحول الذي أحدثه باندورا في علم النفس من خلال "التعلم بالملاحظة".</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 يُنسب لباندورا الفضل في تقديم أساسات في مجالات متعددة، حيث نقل علم النفس من السلوكية إلى علم النفس المعرفي عبر ابتكار نظرية التعلم الاجتماعي ونظرية فاعلية الذات. أثبت باندورا أن التعلم لا يقتصر على المثير والاستجابة، بل تلعب العمليات المعرفية والبيئة دوراً تكاملياً.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q6')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q6')">إجابتي خاطئة</button>
                 </div>
@@ -310,13 +294,10 @@
             <div class="question-text">س7: اشرح مفهوم "التعلم البديل" وكيف يسهم في تعديل السلوك دون تجربة مباشرة.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 يحدث التعلم البديل عندما يلاحظ الشخص نتائج استجابة النموذج (تعزيز أو عقاب)، ومن خلال تعبيرات الوجه أو الإيماءات يدرك المراقب العواقب دون أن يواجهها بنفسه. هذه الخبرة البديلة تستثير المراقب وتؤثر في استجابته المستقبلية في مواقف مشابهة.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q7')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q7')">إجابتي خاطئة</button>
                 </div>
@@ -328,13 +309,10 @@
             <div class="question-text">س8: ناقش "عملية الانتباه" كأولى العمليات الأساسية في التعلم بالملاحظة، موضحاً العوامل المؤثرة فيها.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 الانتباه عملية انتقائية تعتمد على خصائص النموذج (مثل المكانة الاجتماعية، الكفاءة، الجاذبية، والتشابه مع المتعلم). كما تتأثر بخصائص المراقب نفسه مثل قدرته الإدراكية وخبراته السابقة، وضعف الانتباه يؤدي إلى تعلم جزئي أو غير سليم.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q8')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q8')">إجابتي خاطئة</button>
                 </div>
@@ -346,13 +324,10 @@
             <div class="question-text">س9: كيف تساهم "الرموز اللفظية" و"الصور الذهنية" في عملية الاحتفاظ (Retention)؟</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 الاحتفاظ يتطلب تدوين المادة المتعلمة رمزياً؛ فالانسان يتذكر صوراً مرئية أو تعبيرات لفظية لسلوك النموذج. الأنماط اللفظية تسمح باستدعاء مدى غير محدود من الأنشطة السلوكية التي يصعب تمثيلها واقعياً، وهي الأسرع والأكثر ثباتاً في التعلم الملاحظ.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q9')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q9')">إجابتي خاطئة</button>
                 </div>
@@ -364,15 +339,315 @@
             <div class="question-text">س10: وضح دور "التمثيل الحركي" (Motor Reproduction) في تحويل المعرفة إلى مهارة، خاصة عند الرياضيين.</div>
             <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
             <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
-            
             <div class="model-answer-box">
                 <div class="model-answer-title">الإجابة النموذجية:</div>
                 لكي يتعلم الفرد، يجب أن يكون قادراً على تمثيل الاستجابة حركياً، حيث تتحول التعليمات اللفظية والرموز الداخلية إلى مهارات حركية فعلية أثناء التدريب. إذا كانت بعض عناصر المهارة غائبة، يجب تنميتها عبر الملاحظة المستمرة والممارسة حتى تتطابق الاستجابة مع النموذج.
-                
                 <div class="evaluation-zone">
-                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
                     <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q10')">إجابتي صحيحة</button>
                     <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q10')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="11">
+            <div class="question-text">س11: ميز بين التعلم الاجتماعي والنظريات السلوكية والإدراكية البحتة من حيث العوامل المؤثرة.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تفترض السلوكية أن البيئة هي المحرك الوحيد، بينما ترى الإدراكية أن العوامل النفسية هي الأهم. أما التعلم الاجتماعي فيجمع بين العوامل البيئية والنفسية معاً، حيث يرى أن الإنسان يتأثر بالمحفزات الخارجية وبقدرته الداخلية على التذكر والتوقع.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q11')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q11')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="12">
+            <div class="question-text">س12: حلل نتائج تجربة "دمية بوبو" (1961) في تفسير كف أو إطلاق السلوك العدواني.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                أظهرت التجربة أن الأطفال الذين شاهدوا نموذجاً يُعاقب على عدوانه ضعف لديهم احتمال تكرار السلوك (تقوية المانع)، بينما مشاهدة نموذج يُكافأ أو لا يُعاقب أدت إلى إضعاف المانع وإطلاق السلوك العدواني. هذا يثبت أن التعلم بالملاحظة ينقل قواعد السلوك وتوقعات النتائج.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q12')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q12')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="13">
+            <div class="question-text">س13: ما المقصود بـ "النموذج الرمزي" وما هي مصادره في العصر الحديث؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                النموذج الرمزي هو الذي لا يكون شخصاً واقعياً حاضراً بل يتمثل في الكتب، أبطال الأفلام، الصور، أو رجال الدين والقادة الذين يُقتدى بهم عبر وسائل الإعلام. ومع اكتساب الطفل للغة، تصبح الصور المتلفزة والقصص مصادر أساسية للتعلم بالملاحظة.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q13')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q13')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="14">
+            <div class="question-text">س14: ناقش أهمية "الدافعية" في تحويل الملاحظة إلى أداء فعلي.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                لا يكفي الانتباه والاحتفاظ لحدوث التعلم، بل يجب توفر قدر مناسب من الدافعية (مثل حب الاستطلاع، دافع الإنجاز، أو التنافس). الدافع هو السبب الكافي الذي يجعل الشخص يرغب في تبني سلوك معين واستدعاء التمشيلات اللفظية والصورية المخزنة لتحويلها إلى فعل.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q14')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q14')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="15">
+            <div class="question-text">س15: كيف يفسر باندورا حدوث "القلق" الاجتماعي من خلال ملاحظة تجارب الآخرين؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                يرى باندورا أن مجرد الملاحظة البسيطة لخبرات الآخرين الفاشلة أو تعرضهم للقلق أثناء التحدث أمام الجمهور كافية لتوليد شعور مماثل بالقلق لدى المراقب. فالإنسان يستنتج التوقعات السلبية من ملاحظة ردود أفعال الآخرين وعثراتهم.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q15')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q15')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+
+        <div class="category-title">المجموعة الثالثة: نظرية معالجة المعلومات</div>
+
+        <div class="question-card" data-q="16">
+            <div class="question-text">س16: قارن بين العقل البشري والحاسوب وفقاً لنظرية معالجة المعلومات.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                يشترك الاثنان في عمليات الإدخال (عبر الحواس/البطاقات)، الترميز، التخزين، والاسترجاع. لكن الإنسان يتميز بقدرته على تغيير استراتيجيات المعالجة ذاتياً أثناء العملية، بينما يعتمد الحاسوب على برنامج محدد سلفاً لا يتغير إلا بتغيير البرنامج نفسه.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q16')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q16')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="17">
+            <div class="question-text">س17: اشرح الافتراضين الأساسيين للتعلم في علم النفس المعرفي.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                أولاً: التعلم عملية نشطة؛ المتعلمون يبحثون عن المعرفة ولا ينتظرون وصولها إليهم. ثانياً: المعرفة السابقة تؤثر في التعلم الجديد؛ فمهارات وقدرات المتعلم السابقة تحدد مدى عمق وسرعة استيعابه للمعلومات الجديدة مقارنة بغيره.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q17')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q17')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="18">
+            <div class="question-text">س18: حلل دور "المسجلات الحاسية" (Sensory Registers) وسبب ضياع معظم المعلومات فيها.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تستقبل المسجلات الحاسية المثيرات (أضواء، أصوات) لفترة قصيرة جداً (جزء من الثانية). المعلومات التي لا تحظى بالانتباه الانتقائي تضيع فوراً، بينما ينتقل الجزء الذي يتم الانتباه له إلى الذاكرة قصيرة المدى.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q18')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q18')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="19">
+            <div class="question-text">س19: ناقش سعة الذاكرة قصيرة المدى وكيفية التغلب على محدوديتها باستخدام "التجزئة" (Chunking).</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                سعة هذه الذاكرة محدودة جداً (حوالي 5-9 وحدات) ولمدة 20-30 ثانية فقط. يمكن التغلب على ذلك بـ تجميع وحدات المعلومات في "حزم" أو مجموعات (مثل تقسيم رقم هاتف طويل إلى ثلاث مجموعات)، مما يقلل العبء على الذاكرة ويسمح باحتفاظ فعال.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q19')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q19')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="20">
+            <div class="question-text">س20: ما الفرق بين "المراجعة الآلية" و"المراجعة المستفيضة" في تخزين المعلومات؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                المراجعة الآلية هي تكرار المعلومة بصمت أو بصوت مرتفع للحفاظ عليها مؤقتاً. أما المراجعة المستفيضة فهي عملية بحث هادفة لاستقصاء المعنى وربط المعلومات الجديدة بالخبرات السابقة، وهي الكفيلة بنقل المعلومات إلى الذاكرة طويلة المدى.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q20')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q20')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="21">
+            <div class="question-text">س21: اشرح "نظرية الترميز الثنائي" (Dual Code Theory) وأثرها على جودة الاستدعاء.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تفترض النظرية أن المعلومات تُخزن إما في صور بصرية (Visual Images) أو رموز لفظية. الاستدعاء يكون أفضل إذا تم التعلم والاختبار بنفس الشكل (لفظي-لفظي)، وتصل الجودة لأقصاها إذا حدث التعلم عبر الشكلين معاً (بصري ولفظي) بغض النظر عن طريقة الاختبار.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q21')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q21')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="22">
+            <div class="question-text">س22: حلل مفهوم "المخططات" (Schemas) وكيف توجه سلوك الفرد وتوقعاته.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                المخطط هو بناء معرفي ينظم المعرفة حول موضوعات أو أحداث معينة بناءً على التشابه والاختلاف. المخططات ترشد السلوك وتساعد في فهم الأنشطة المعرفية (مثل مخططات الكتب القصصية)، لكنها قد تؤدي إلى أخطاء إذا كانت المخططات الأولية للفرد خاطئة أو مشوهة.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q22')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q22')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="23">
+            <div class="question-text">س23: فسر ظاهرة "على طرف اللسان" (Tip-of-the-Tongue) من منظور معالجة المعلومات.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تشير هذه الظاهرة إلى أن المشكلة ليست في فقدان المعلومة من الذاكرة طويلة المدى، بل في صعوبة الوصول إليها أو "الفشل في الاسترجاع". فالمعلومات موجودة لكن "خاملة"، وتذكر جزء منها (كالحرف الأول) يثبت أن العجز يكمن في مسار الوصول للمعلومة لا في وجودها.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q23')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q23')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="24">
+            <div class="question-text">س24: اشرح العمليات الثلاث الأساسية للذاكرة كما وصفها "هولس" ورفاقه.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تشمل: 1- تصنيف المعلومات، 2- التخزين والاحتفاظ بها في الذاكرة لاستخدامها مستقبلاً، 3- الاسترجاع أو التعرف واستدعاء ما سبق تصنيفه وتخزينه.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q24')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q24')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="25">
+            <div class="question-text">س25: وضح وظيفة "الذاكرة العاملة" ولماذا تُشبه بـ "لوح الكتابة العقلي".</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تُسمى الذاكرة قصيرة المدى بالذاكرة العاملة لأنها تحتوي على المعلومات النشطة حالياً في الدماغ. هي "لوح كتابة عقلي" لأنها المكان الذي تُجرى فيه العمليات الحقيقية للحل والتهجئة والتفكير، حيث تستدعي معلومات من الذاكرة طويلة المدى لتعالجها مع المدخلات الجديدة.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q25')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q25')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="26">
+            <div class="question-text">س26: كيف يمكن للمعلم جذب انتباه الطلاب باستخدام طرق "غير مألوفة" وفقاً للنظرية؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                يمكن ذلك عبر استخدام ألوان متنوعة، أصوات متغيرة، أضواء خاطفة، أو شعارات مشوقة. كما أن تغيير وتيرة الصوت (الصوت المنخفض أحياناً يستحوذ على الانتباه) أو تغيير مكان الوقوف في الفصل يكسر الجمود ويحفز الانتباه.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q26')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q26')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="27">
+            <div class="question-text">س27: ما هي استراتيجية "ربط المعلومات بالواقع" لتعزيز الذاكرة طويلة المدى؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تعتمد على تقديم المفاهيم الجديدة عبر طرق مبتكرة تربطها بمفاهيم مألوفة؛ فمثلاً عند تدريس "الظرف"، يمكن وصفه بأنه "صفات للأفعال" بدلاً من الأسماء، أو ربط الأحداث التاريخية بعقود زمنية مألوفة للطالب.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q27')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q27')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="28">
+            <div class="question-text">س28: ناقش دور "العقاب البديل" في تشكيل السلوك الاجتماعي داخل الفصل الدراسي.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                عندما يرى الطلاب زميلاً يُعاقب على سلوك ما، فإنهم يكتسبون "توقعاً" بأن هذا السلوك يؤدي لنتائج سلبية. هذا يقوي الموانع لديهم دون الحاجة لتعرضهم للعقاب مباشرة، مما يسهم في ضبط بيئة الفصل من خلال الملاحظة.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q28')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q28')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="29">
+            <div class="question-text">س29: اشرح أهمية "التغذية الراجعة" وتصحيح المخططات الخاطئة لدى الطلاب.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                قد يمتلك الطلاب مخططات خاطئة (مثل اعتبار المراجعة مضيعة للوقت). يجب على المعلم التدخل لتوضيح قواعد المراجعة والتعلم الزائد، وتبيان كيف أن المراجعة المسبقة تساعدهم في اكتشاف ما لم يفهموه وطرح الأسئلة قبل فوات الأوان.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q29')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q29')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="30">
+            <div class="question-text">س30: حلل أهمية "التعرف" (Recognition) مقارنة بـ "الاستدعاء" (Recall) في قياس الذاكرة.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                الاستدعاء هو إنتاج استجابة سبق عرضها، وهو أصعب. أما التعرف فهو اختيار الاستجابة الصحيحة من بين عدة بدائل. كلاهما يعتمد على قوة الترميز والتنظيم، لكن التعرف يوفر مثيرات تساعد الذاكرة على الوصول للمعلومة المخزنة بسهولة أكبر من الاستدعاء الحر.
+                <div class="evaluation-zone">
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q30')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q30')">إجابتي خاطئة</button>
                 </div>
                 <div class="status-badge"></div>
             </div>
@@ -383,11 +658,9 @@
 </div>
 
 <script>
-    // لتتبع الإجابات المقيّمة
     const userEvaluations = {};
-    const totalQuestions = 10;
+    const totalQuestions = 30;
 
-    // دالة فتح وإغلاق الإجابة النموذجية
     function toggleAnswer(button) {
         const card = button.closest('.question-card');
         const answerBox = card.querySelector('.model-answer-box');
@@ -403,7 +676,6 @@
         }
     }
 
-    // دالة لحفظ التقييم الذاتي لكل سؤال
     function rateAnswer(button, isCorrect, questionId) {
         const card = button.closest('.question-card');
         const badge = card.querySelector('.status-badge');
@@ -414,12 +686,11 @@
             badge.innerText = 'حالتك: تم تقييم إجابتك كـ (صحيحة) ✓';
             badge.style.color = '#2ecc71';
         } else {
-            badge.innerText = 'حالتك: تم تقييم إجابتك كـ (خاطئة أو تحتاج تحسين) ✗';
+            badge.innerText = 'حالتك: تحتاج مراجعة وتحسين ✗';
             badge.style.color = '#e74c3c';
         }
     }
 
-    // دالة لحساب وعرض التقرير الإجمالي في أعلى الصفحة
     function calculateFinalScore() {
         let correctCount = 0;
         let evaluatedCount = Object.keys(userEvaluations).length;
@@ -435,13 +706,13 @@
 
         if (evaluatedCount < totalQuestions) {
             resultBox.innerHTML = `ملاحظة: لقد قمت بتقييم ${evaluatedCount} أسئلة فقط من أصل ${totalQuestions}.<br>
-            حسب تقييمك الذاتي الحالي: إجاباتك الصحيحة هي <strong>${correctCount}</strong> من أصل ${evaluatedCount}.`;
+            حسب تقييمك الحالي: إجاباتك المتقنة هي <strong>${correctCount}</strong> من أصل ${evaluatedCount}.`;
             resultBox.style.borderColor = '#f39c12';
             resultBox.style.backgroundColor = '#fef9e7';
             resultBox.style.color = '#d35400';
         } else {
-            resultBox.innerHTML = `تقرير التقييم الذاتي النهائي:<br>
-            لقد أجبت بشكل صحيح على <strong>${correctCount}</strong> من أصل ${totalQuestions} أسئلة مقالية! نسبة تحصيلك: <strong>${(correctCount/totalQuestions)*100}%</strong>`;
+            resultBox.innerHTML = `تقرير التقييم الذاتي النهائي الشامل:<br>
+            لقد أتقنت <strong>${correctCount}</strong> من أصل ${totalQuestions} أسئلة مقالية! نسبة تحصيلك المعرفي: <strong>${Math.round((correctCount/totalQuestions)*100)}%</strong>`;
             resultBox.style.borderColor = '#2ecc71';
             resultBox.style.backgroundColor = '#e8f8f0';
             resultBox.style.color = '#196f3d';
