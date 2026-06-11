@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار المقال الذاتي: نظريات التعلم والإدراك</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --success-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .quiz-container {
+            max-width: 850px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .category-title {
+            background: #eaf2f8;
+            color: var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-right: 5px solid var(--secondary-color);
+        }
+
+        .question-card {
+            background: #fafbfc;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .answer-textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical;
+            font-family: inherit;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .btn-toggle-answer {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-toggle-answer:hover {
+            background: #2980b9;
+        }
+
+        .model-answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #edf8f2;
+            border-right: 4px solid var(--success-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .model-answer-title {
+            font-weight: bold;
+            color: #196f3d;
+            margin-bottom: 5px;
+        }
+
+        .evaluation-zone {
+            display: none;
+            margin-top: 15px;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .eval-btn {
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .eval-btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-correct { background-color: var(--success-color); }
+        .btn-incorrect { background-color: var(--danger-color); }
+
+        .status-badge {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .btn-finish {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            margin-top: 30px;
+        }
+
+        .btn-finish:hover {
+            background: #1a252f;
+        }
+
+        #result-box {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: #e8f8f0;
+            border: 2px solid var(--success-color);
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #196f3d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>اختبار الأسئلة المقالية والتقييم الذاتي</h1>
+    <div class="subtitle">اكتب إجابتك في الصندوق المخصص، ثم قارنها بالإجابة النموذجية وقيم نفسك لتصحيح التلقائي.</div>
+    
+    <div id="result-box"></div>
+
+    <form id="quiz-form">
+        
+        <div class="category-title">المجموعة الأولى: نظرية الجشتالت</div>
+
+        <div class="question-card" data-q="1">
+            <div class="question-text">س1: حلل العلاقة بين "النضج" و"مستوى الكائن الحي" في عملية الإدراك وفقاً لمنظور الجشتالت.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا قبل الاطلاع على الحل..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                ترى نظرية الجشتالت أن إمكانية الإدراك تختلف تبعاً للنضج والذكاء والمستوى البيولوجي والارتقائي للكائن الحي. فإدراك الطفل يختلف جوهرياً عن إدراك الراشد، كما أن إدراك الإنسان يتميز عن إدراك الحيوان، حيث يتوقف "الاستبصار" على قدرة الكائن على تنظيم المجال الإدراكي، وكلما كان المجال منظماً، سهل إدراك العلاقات والوصول إلى الحل.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q1')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q1')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="2">
+            <div class="question-text">س2: ناقش دور "التفاعل الديناميكي" و"حالة عدم الاتزان" في تحفيز عملية التعلم عند الجشتالتيين.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تعطي الجشتالت أهمية قصوى للتفاعل الديناميكي بين الكائن والبيئة؛ فالكائن يتفاعل لإيجاد حالة من التوازن النسبي لإزالة التوتر الناشئ عن الحاجة (مثل دافع الجوع). هذا التوتر يخلق حالة من عدم الاتزان تدفع الكائن للقيام بسلوك أو حركة تهدف لإعادة التوازن من خلال تغيير المجال السيكولوجي والبيئي، وبمجرد إشباع الحاجة يتوقف النشاط ويستسلم الكائن للهدوء.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q2')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q2')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="3">
+            <div class="question-text">س3: قارن بين "الآثار الفردية" و"الآثار الكلية" في ذاكرة الجشتالت وكيفية انتقال أثر التدريب.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                الآثار الفردية هي آثار متميزة عن غيرها وتعرف في كل جزئية معينة، بينما الآثار الكلية (النظام العام) هي التي تعمل على جذب الأجزاء وإعطائها دلالة. التعلم الجديد يمحو الآثار الفردية السابقة ليثبت "نظام الأثر" الكلي، وانتقال أثر التدريب يحدث عندما يستطيع الفرد نقل الآثار التي تعلمها وفقاً لنظام الكليات إلى مواقف أخرى مشابهة.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q3')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q3')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="4">
+            <div class="question-text">س4: ما هي الانتقادات الموجهة لنظرية الجشتالت فيما يتعلق بالخبرة السابقة وعملية الاستبصار؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تتمثل السلبيات في عدم اعتراف الجشتالت بدور الخبرة السابقة في عملية التعلم، واعتبارهم أن الاستبصار عملية فجائية لا دخل للخبرة فيها. كما يرى النقاد أن القوانين الديناميكية التي تحكم الإدراك عندهم لا تفسر بالضرورة القوانين التي تحكم عملية التعلم بشكل مقنع وعلمي خاضع للتجارب.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q4')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q4')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="5">
+            <div class="question-text">س5: اشرح أهمية نظرية الجشتالت في Mمارسات التعليم الحديثة، خاصة في المرحلة الابتدائية.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                تعتبر الطريقة الكلية في التعلم أساساً في رياض الأطفال والمدارس الابتدائية، حيث أيدت مدرسة علم النفس المعرفي (Cognitive Psychologists) وجهة نظر الجشتالت بأن الكل أكبر من مجموع أجزائه. وتبرز أهميتها في استخدام قوانين الإدراك (مثل قانون التناسب والامتلاء) كأدوات تجعل التعلم أكثر صدقاً وواقعية في الحياة اليومية.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q5')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q5')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="category-title">المجموعة الثانية: نظرية التعلم الاجتماعي (باندورا)</div>
+
+        <div class="question-card" data-q="6">
+            <div class="question-text">س6: حلل التحول الذي أحدثه باندورا في علم النفس من خلال "التعلم بالملاحظة".</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                يُنسب لباندورا الفضل في تقديم أساسات في مجالات متعددة، حيث نقل علم النفس من السلوكية إلى علم النفس المعرفي عبر ابتكار نظرية التعلم الاجتماعي ونظرية فاعلية الذات. أثبت باندورا أن التعلم لا يقتصر على المثير والاستجابة، بل تلعب العمليات المعرفية والبيئة دوراً تكاملياً.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q6')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q6')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="7">
+            <div class="question-text">س7: اشرح مفهوم "التعلم البديل" وكيف يسهم في تعديل السلوك دون تجربة مباشرة.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                يحدث التعلم البديل عندما يلاحظ الشخص نتائج استجابة النموذج (تعزيز أو عقاب)، ومن خلال تعبيرات الوجه أو الإيماءات يدرك المراقب العواقب دون أن يواجهها بنفسه. هذه الخبرة البديلة تستثير المراقب وتؤثر في استجابته المستقبلية في مواقف مشابهة.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q7')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q7')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="8">
+            <div class="question-text">س8: ناقش "عملية الانتباه" كأولى العمليات الأساسية في التعلم بالملاحظة، موضحاً العوامل المؤثرة فيها.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                الانتباه عملية انتقائية تعتمد على خصائص النموذج (مثل المكانة الاجتماعية، الكفاءة، الجاذبية، والتشابه مع المتعلم). كما تتأثر بخصائص المراقب نفسه مثل قدرته الإدراكية وخبراته السابقة، وضعف الانتباه يؤدي إلى تعلم جزئي أو غير سليم.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q8')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q8')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="9">
+            <div class="question-text">س9: كيف تساهم "الرموز اللفظية" و"الصور الذهنية" في عملية الاحتفاظ (Retention)؟</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                الاحتفاظ يتطلب تدوين المادة المتعلمة رمزياً؛ فالانسان يتذكر صوراً مرئية أو تعبيرات لفظية لسلوك النموذج. الأنماط اللفظية تسمح باستدعاء مدى غير محدود من الأنشطة السلوكية التي يصعب تمثيلها واقعياً، وهي الأسرع والأكثر ثباتاً في التعلم الملاحظ.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q9')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q9')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <div class="question-card" data-q="10">
+            <div class="question-text">س10: وضح دور "التمثيل الحركي" (Motor Reproduction) في تحويل المعرفة إلى مهارة، خاصة عند الرياضيين.</div>
+            <textarea class="answer-textarea" placeholder="اكتب مسودة إجابتك هنا..."></textarea>
+            <button type="button" class="btn-toggle-answer" onclick="toggleAnswer(this)">إظهار الإجابة النموذجية</button>
+            
+            <div class="model-answer-box">
+                <div class="model-answer-title">الإجابة النموذجية:</div>
+                لكي يتعلم الفرد، يجب أن يكون قادراً على تمثيل الاستجابة حركياً، حيث تتحول التعليمات اللفظية والرموز الداخلية إلى مهارات حركية فعلية أثناء التدريب. إذا كانت بعض عناصر المهارة غائبة، يجب تنميتها عبر الملاحظة المستمرة والممارسة حتى تتطابق الاستجابة مع النموذج.
+                
+                <div class="evaluation-zone">
+                    <span>قيم إجابتك المكتوبة مقارنة بالنموذج:</span>
+                    <button type="button" class="eval-btn btn-correct" onclick="rateAnswer(this, true, 'q10')">إجابتي صحيحة</button>
+                    <button type="button" class="eval-btn btn-incorrect" onclick="rateAnswer(this, false, 'q10')">إجابتي خاطئة</button>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-finish" onclick="calculateFinalScore()">إظهار تقرير التقييم الإجمالي</button>
+    </form>
+</div>
+
+<script>
+    // لتتبع الإجابات المقيّمة
+    const userEvaluations = {};
+    const totalQuestions = 10;
+
+    // دالة فتح وإغلاق الإجابة النموذجية
+    function toggleAnswer(button) {
+        const card = button.closest('.question-card');
+        const answerBox = card.querySelector('.model-answer-box');
+        const evalZone = card.querySelector('.evaluation-zone');
+
+        if (answerBox.style.display === 'block') {
+            answerBox.style.display = 'none';
+            button.innerText = 'إظهار الإجابة النموذجية';
+        } else {
+            answerBox.style.display = 'block';
+            evalZone.style.display = 'flex';
+            button.innerText = 'إخفاء الإجابة النموذجية';
+        }
+    }
+
+    // دالة لحفظ التقييم الذاتي لكل سؤال
+    function rateAnswer(button, isCorrect, questionId) {
+        const card = button.closest('.question-card');
+        const badge = card.querySelector('.status-badge');
+        
+        userEvaluations[questionId] = isCorrect;
+
+        if(isCorrect) {
+            badge.innerText = 'حالتك: تم تقييم إجابتك كـ (صحيحة) ✓';
+            badge.style.color = '#2ecc71';
+        } else {
+            badge.innerText = 'حالتك: تم تقييم إجابتك كـ (خاطئة أو تحتاج تحسين) ✗';
+            badge.style.color = '#e74c3c';
+        }
+    }
+
+    // دالة لحساب وعرض التقرير الإجمالي في أعلى الصفحة
+    function calculateFinalScore() {
+        let correctCount = 0;
+        let evaluatedCount = Object.keys(userEvaluations).length;
+
+        for (let key in userEvaluations) {
+            if (userEvaluations[key] === true) {
+                correctCount++;
+            }
+        }
+
+        const resultBox = document.getElementById('result-box');
+        resultBox.style.display = 'block';
+
+        if (evaluatedCount < totalQuestions) {
+            resultBox.innerHTML = `ملاحظة: لقد قمت بتقييم ${evaluatedCount} أسئلة فقط من أصل ${totalQuestions}.<br>
+            حسب تقييمك الذاتي الحالي: إجاباتك الصحيحة هي <strong>${correctCount}</strong> من أصل ${evaluatedCount}.`;
+            resultBox.style.borderColor = '#f39c12';
+            resultBox.style.backgroundColor = '#fef9e7';
+            resultBox.style.color = '#d35400';
+        } else {
+            resultBox.innerHTML = `تقرير التقييم الذاتي النهائي:<br>
+            لقد أجبت بشكل صحيح على <strong>${correctCount}</strong> من أصل ${totalQuestions} أسئلة مقالية! نسبة تحصيلك: <strong>${(correctCount/totalQuestions)*100}%</strong>`;
+            resultBox.style.borderColor = '#2ecc71';
+            resultBox.style.backgroundColor = '#e8f8f0';
+            resultBox.style.color = '#196f3d';
+        }
+
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
+
+</body>
+</html>
